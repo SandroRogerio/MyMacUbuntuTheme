@@ -1,0 +1,50 @@
+---
+- name: Installs the Gnome-Shell desktop and utilities
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install_gnome_shell
+
+- name: Installs the Mac GTK theme
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install_mac_gtk_theme
+
+- name: Installs the dock on the desktop
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install_dock_desktop
+
+- name: Install the Launchpad
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install_launchpad
+
+- name: Implements the set of Mac OS icons
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install_icons_mac
+
+- name: Download wallpaper MacBuntu
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install_wallpaper_macbuntu
+
+- name: Updates system fonts
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - updates_fonts_mac
+
